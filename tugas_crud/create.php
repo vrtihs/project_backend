@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stok        = $_POST['stok'];
     $status      = $_POST['status'];
 
-    // Validasi file upload
+    
     $gambar = null;
     if (!empty($_FILES['gambar']['name'])) {
         $allowedTypes = ['image/jpeg', 'image/png'];
-        $maxSize = 2 * 1024 * 1024; // 2MB
+        $maxSize = 2 * 1024 * 1024;
 
         if (in_array($_FILES['gambar']['type'], $allowedTypes) && $_FILES['gambar']['size'] <= $maxSize) {
             $targetDir = "uploads/";
@@ -56,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':status'      => $status
     ]);
 
-    echo "Data sudah ditambahkan! <a href='read.php'>Lihat Data</a>";
+    echo "Data sudah ditambahkan! <a href='read.php'>Lihat Data Produk</a>";
 }
 
 ?>
+
