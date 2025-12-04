@@ -5,11 +5,11 @@
     Stok: <input type="number" name="stok" required><br>
     Status: 
     <select name="status">
-        <option value="Tersedia">Tersedia</option>
-        <option value="Kosong">Kosong</option>
+        <option value="Tersedia">Barang Tersedia</option>
+        <option value="Kosong">Barang Kosong</option>
     </select><br>
     Gambar: <input type="file" name="gambar" accept="image/*"><br>
-    <button type="submit">Simpan</button>
+    <button type="submit">Simpan Data</button>
 </form>
 
 <?php
@@ -58,4 +58,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "Data sudah ditambahkan! <a href='read.php'>Lihat Data</a>";
 }
+
 ?>
