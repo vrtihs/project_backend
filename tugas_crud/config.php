@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $db   = 'backend_project';
-$user = 'root';   // sesuaikan dengan user MariaDB/MySQL kamu
-$pass = '';       // sesuaikan dengan password
+$user = 'root'; 
+$pass = ''; 
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -14,6 +14,7 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    die("Koneksi database gagal: " . $e->getMessage());
+    die("Koneksi ke database gagal: " . $e->getMessage());
 }
+
 ?>
